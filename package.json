@@ -1,0 +1,54 @@
+{
+  "name": "slack-bot-kit",
+  "version": "0.1.0",
+  "description": "Conventions and adapters for building Slack bots on serverless platforms — Netlify, Vercel, AWS Lambda, and Express — on top of @slack/bolt.",
+  "license": "MIT",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE",
+    "NOTICE.md",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint \"src/**/*.ts\" \"tests/**/*.ts\"",
+    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "slack",
+    "slack-bot",
+    "bolt",
+    "netlify",
+    "vercel",
+    "lambda",
+    "serverless",
+    "typescript"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "peerDependencies": {
+    "@slack/bolt": "^4.0.0"
+  },
+  "devDependencies": {
+    "@slack/bolt": "^4.1.0",
+    "@types/aws-lambda": "^8.10.145",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.0",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "@vitest/coverage-v8": "^2.0.0",
+    "eslint": "^8.57.0",
+    "prettier": "^3.3.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0"
+  }
+}

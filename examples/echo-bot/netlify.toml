@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/slack/events"
+  to = "/.netlify/functions/slack"
+  status = 200
+
+[context.production.environment]
+  NODE_VERSION = "20"
