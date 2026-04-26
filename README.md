@@ -1,6 +1,6 @@
 # SlackBotKit
 
-[![CI](https://github.com/USER/slack-bot-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/USER/slack-bot-kit/actions/workflows/ci.yml)
+[![CI](https://github.com/dhjr0124/slack-bot-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/dhjr0124/slack-bot-kit/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Node](https://img.shields.io/badge/node-%3E%3D20-brightgreen.svg)](#requirements)
 
