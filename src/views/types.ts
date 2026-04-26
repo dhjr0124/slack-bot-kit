@@ -1,4 +1,4 @@
-import type { Block as BoltBlock, KnownBlock, View } from "@slack/bolt";
+import type { Block as BoltBlock, KnownBlock, View } from "@slack/types";
 
 export type Block = KnownBlock | BoltBlock;
 export type Blocks = Block[];

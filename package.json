@@ -2,6 +2,15 @@
   "name": "slack-bot-kit",
   "version": "0.1.0",
   "description": "Conventions and adapters for building Slack bots on serverless platforms — Netlify, Vercel, AWS Lambda, and Express — on top of @slack/bolt.",
+  "author": "Dale Hopkins <114239371+dhjr0124@users.noreply.github.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dhjr0124/slack-bot-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dhjr0124/slack-bot-kit/issues"
+  },
+  "homepage": "https://github.com/dhjr0124/slack-bot-kit#readme",
   "license": "MIT",
   "type": "commonjs",
   "main": "dist/index.js",
@@ -41,14 +50,14 @@
   "devDependencies": {
     "@slack/bolt": "^4.1.0",
     "@types/aws-lambda": "^8.10.145",
-    "@types/express": "^4.17.21",
+    "@types/express": "^5.0.0",
     "@types/node": "^20.14.0",
-    "@typescript-eslint/eslint-plugin": "^7.18.0",
-    "@typescript-eslint/parser": "^7.18.0",
-    "@vitest/coverage-v8": "^2.0.0",
-    "eslint": "^8.57.0",
+    "@eslint/js": "^9.0.0",
+    "@vitest/coverage-v8": "^4.0.0",
+    "eslint": "^9.0.0",
+    "typescript-eslint": "^8.0.0",
     "prettier": "^3.3.0",
     "typescript": "^5.5.0",
-    "vitest": "^2.0.0"
+    "vitest": "^4.0.0"
   }
 }

@@ -23,6 +23,7 @@ const baseOptions = {
   signingSecret: "secret",
   botToken: "xoxb-test",
   registerRoutes: () => {},
+  authorize: async () => ({ botToken: "xoxb-test", botId: "B0", botUserId: "U0" }),
 };
 
 describe("createLambdaHandler", () => {

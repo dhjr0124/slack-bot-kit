@@ -1,4 +1,5 @@
-import type { ReceiverEvent, SlackAction, View } from "@slack/bolt";
+import type { ReceiverEvent, SlackAction } from "@slack/bolt";
+import type { View } from "@slack/types";
 import type { WebClient } from "@slack/web-api";
 import type { Logger } from "./core/logger";
 import type { SlackMessageReply, SlackPrivateReply, SlackReactionReply } from "./constants";
@@ -38,11 +39,11 @@ export function parseRequestBody(
 
 export function generateReceiverEvent(payload: unknown): ReceiverEvent {
   return {
-    body: payload,
-    ack: async (response): Promise<{ statusCode: number; body: string }> => ({
-      statusCode: 200,
-      body: typeof response === "string" ? response : response ? JSON.stringify(response) : "",
-    }),
+    body: payload as Record<string, unknown>,
+    ack: async (_response?: unknown): Promise<void> => {
+      // Bolt's AckFn returns void; the surrounding adapter constructs the
+      // platform response itself. We swallow whatever the handler passes.
+    },
   };
 }
 

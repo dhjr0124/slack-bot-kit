@@ -1,4 +1,4 @@
-import type { View } from "@slack/bolt";
+import type { View } from "@slack/types";
 import type { Block, Blocks } from "./types";
 
 /**

@@ -95,16 +95,14 @@ describe("generateReceiverEvent", () => {
     expect(event.ack).toBeTypeOf("function");
   });
 
-  it("ack() resolves to a 200 with empty body when called bare", async () => {
+  it("ack() resolves to void (Bolt 4 AckFn contract)", async () => {
     const event = generateReceiverEvent({});
-    const result = await event.ack();
-    expect(result).toEqual({ statusCode: 200, body: "" });
+    await expect(event.ack()).resolves.toBeUndefined();
   });
 
-  it("ack(string) echoes the string in body", async () => {
+  it("ack(arg) accepts a payload and still resolves void", async () => {
     const event = generateReceiverEvent({});
-    const result = await event.ack("hello");
-    expect(result).toEqual({ statusCode: 200, body: "hello" });
+    await expect(event.ack("anything")).resolves.toBeUndefined();
   });
 });
 

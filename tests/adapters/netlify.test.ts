@@ -23,6 +23,9 @@ const baseOptions = {
   signingSecret: "test-secret",
   botToken: "xoxb-test",
   registerRoutes: () => {},
+  // Skip Bolt's auth.test round trip — we're not exercising real Slack API
+  // calls in unit tests.
+  authorize: async () => ({ botToken: "xoxb-test", botId: "B0", botUserId: "U0" }),
 };
 
 describe("createNetlifyHandler", () => {
